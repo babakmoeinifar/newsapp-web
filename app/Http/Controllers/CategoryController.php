@@ -24,6 +24,12 @@ class CategoryController extends Controller
 
     public function store(Request $request)
     {
+        $data = $request->validate([
+            'title' => 'required',
+            'color' => 'required',
+        ]);
 
+        Category::create($data);
+        return redirect()->back()->with('flash', 'Category Created!');
     }
 }
