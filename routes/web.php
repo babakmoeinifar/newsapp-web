@@ -19,6 +19,7 @@ Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
+Route::get('/categories', 'CategoryController@index');
+Route::get('/category/{id}', 'CategoryController@show');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/tags', 'TagController@index');
