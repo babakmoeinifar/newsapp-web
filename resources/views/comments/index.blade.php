@@ -15,8 +15,8 @@
                 </div>
             </div>
         @endforeach
-<div class="row mx-auto mt-3">
-    {{ $comments->links() }}
-</div>
+        <div class="row mx-auto mt-3">
+            {{ $comments->links() }}
+        </div>
     </div>
 @endsection

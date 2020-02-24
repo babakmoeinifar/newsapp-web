@@ -20,15 +20,21 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::middleware(['auth'])->group(function () {
 
-    Route::get('/categories', 'CategoryController@index');
+    Route::get('/categories', 'CategoryController@index')->name('categories');
     Route::post('/categories', 'CategoryController@store')->name('save-category');
     Route::get('/category/{id}', 'CategoryController@show');
 
-    Route::get('/tags', 'TagController@index');
+    Route::get('/tags', 'TagController@index')->name('tags');
     Route::post('/tags', 'TagController@store')->name('save-tag');
     Route::get('/tag{id}', 'TagController@show');
 
-    Route::get('/comments', 'CommentController@index');
-    Route::get('/comment{id}', 'CommentController@show');
+    Route::get('/comments', 'CommentController@index')->name('comments');
+    Route::get('/comment/{id}', 'CommentController@show');
+
+    Route::get('/users', 'UserController@index')->name('users');
+//    Route::get('/users/{id}', 'UserController@show');
+    
+    Route::get('/posts', 'PostController@index')->name('posts');
+    Route::get('/posts/{id}', 'PostController@show')->name('show-post');
 
 });
