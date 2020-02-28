@@ -33,8 +33,15 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/users', 'UserController@index')->name('users');
 //    Route::get('/users/{id}', 'UserController@show');
+<<<<<<< HEAD
     
     Route::get('/posts', 'PostController@index')->name('posts');
+=======
+
+    Route::get('/posts', 'PostController@index')->name('posts');
+    Route::post('/posts', 'PostController@store')->name('save-post');
+    Route::get('/new-post', 'PostController@newPost')->name('add-post');
+>>>>>>> b7b85a36bd5c1d14f0b64671f9fd04262309600f
     Route::get('/posts/{id}', 'PostController@show')->name('show-post');
 
 });

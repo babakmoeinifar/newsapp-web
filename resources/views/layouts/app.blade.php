@@ -76,6 +76,13 @@
                                         {{ __('Posts') }}
                                     </a>
 
+<<<<<<< HEAD
+=======
+                                    <a class="dropdown-item" href="{{ route('add-post') }}">
+                                        {{ __('Add Post') }}
+                                    </a>
+
+>>>>>>> b7b85a36bd5c1d14f0b64671f9fd04262309600f
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
